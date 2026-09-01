@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "title": "Projeto exemplo — Rede de drenagem pluvial",
+      "oneLiner": "Dimensionamento e peças desenhadas para drenagem pluvial em edifício habitacional.",
+      "year": 2026,
+      "tags": ["Esgotos", "Drenagem", "Licenciamento"],
+      "tools": ["AutoCAD"],
+      "cover": "assets/img/exemplo.jpg",
+      "link": "#",
+      "featured": true
+    }
+  ]
+}
