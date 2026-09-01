@@ -31,8 +31,18 @@ function projectCard(p){
     featured.innerHTML = projects.filter(p=>p.featured).slice(0,6).map(projectCard).join('');
   }
 
-  const grid = document.getElementById('projects-grid');
-  if (grid){
-    grid.innerHTML = projects.map(projectCard).join('');
+ const grid = document.getElementById('projects-grid');
+if (grid){
+  const page = (window.location.pathname || '').toLowerCase();
+
+  let filtered = projects;
+
+  if (page.includes('aguas-esgotos.html')) {
+    filtered = projects.filter(p => p.type === 'aguas_esgotos');
+  } else if (page.includes('estruturas.html')) {
+    filtered = projects.filter(p => p.type === 'estruturas');
   }
+
+  grid.innerHTML = filtered.map(projectCard).join('');
+}
 })();
